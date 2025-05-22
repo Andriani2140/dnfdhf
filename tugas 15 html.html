@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Saya</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f1f5f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #3b82f6;
+    }
+
+    nav a {
+      padding: 14px 20px;
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #2563eb;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    ul {
+      line-height: 1.8;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Selamat Datang di Halaman Saya</h1>
+    <p>Profil | Biodata | Kontak</p>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showSection('profil')">Profil</a>
+    <a href="#" onclick="showSection('biodata')">Biodata</a>
+    <a href="#" onclick="showSection('kontak')">Kontak</a>
+  </nav>
+
+  <div class="container">
+    <!-- Halaman Profil -->
+    <div id="profil" class="section active">
+      <h2>Profil</h2>
+      <p>Halo! Nama saya <strong>[Andriani]</strong>. Saya adalah seorang <strong>[pelajar]</strong> yang memiliki minat dalam [Bidang olahraga].</p>
+    </div>
+
+    <!-- Halaman Biodata -->
+    <div id="biodata" class="section">
+      <h2>Biodata</h2>
+      <ul>
+        <li><strong>Nama:</strong> [Andriani]</li>
+        <li><strong>Tempat, Tanggal Lahir:</strong> [Tarowang 29/10/2008]</li>
+        <li><strong>Alamat:</strong> [Jeneponto]</li>
+        <li><strong>Hobi:</strong> [olahraga]</li>
+        <li><strong>Sekolah</strong>[Smk Negeri 1 Bantaeng</li>
+        <li><strong>Jurusan</strong>[Teknik Jaringan Komputer Dan Telekomunikasi</li>
+      </ul>
+    </div>
+
+    <!-- Halaman Kontak -->
+    <div id="kontak" class="section">
+      <h2>Kontak</h2>
+      <p>Anda dapat menghubungi saya melalui:</p>
+      <ul>
+        <li><strong>Email:</strong> [email@andriani.com]</li>
+        <li><strong>Telepon:</strong> [085943501207]</li>
+        <li><strong>Instagram:</strong> [andriani-095]</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
+
